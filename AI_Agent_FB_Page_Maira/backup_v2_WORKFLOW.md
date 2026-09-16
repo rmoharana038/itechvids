@@ -53,16 +53,15 @@ flowchart TD
         K --> L["Pillow Processing: Center-Crop/Resize to exact 9:16 (1080x1920)"]
     end
 
-    subgraph AntiDuplicate["4. Anti-Duplicate Registry & Facebook Jitter"]
+    subgraph AntiDuplicate["4. Anti-Duplicate Registry"]
         L --> N["Compute SHA-256 Hash of Image"]
         N --> O{"Hash in logs/posted_images.json?"}
         O -->|Yes: Duplicate Detected| I
-        O -->|No: Unique Image| P["Apply Facebook Timing Jitter (60-300s, bypass with --no-jitter)"]
+        O -->|No: Unique Image| P["Proceed to 4-Channel Publisher"]
     end
 
     subgraph PagePublishing["5. Phase 1: Facebook Page (Maira.Dash.Page)"]
-        P --> Q0["Check Facebook Security Checkpoints"]
-        Q0 --> Q1["Navigate to Home Feed & Ensure Page Context (Human Delays)"]
+        P --> Q1["Navigate to Page URL & Ensure Page Context"]
         Q1 --> Q2["Open Composer & Set AI Label ON + Feeling + Location"]
         Q2 --> Q3["Attach 9:16 Image & Strictly Verify Preview"]
         Q3 --> Q4["Post Feed Update & Wait for Confirmation"]
@@ -183,26 +182,23 @@ Once all publications complete:
 
 ---
 
-## 5. Anti-Detection & Humanized Safety Guardrails (Exclusively for Facebook)
-
-Safety guardrails and anti-detection mechanisms are applied **strictly to Facebook publishing** (ChatGPT image generation runs immediately upon slot trigger without delays or jitter).
+## 5. Anti-Detection & Humanized Safety Guardrails
 
 To prevent algorithmic pattern detection, shadowbanning, or security challenges by Facebook's automated protection systems, the agent incorporates three layers of safety guardrails:
 
-1. **Facebook Slot Timing Jitter (`enable_slot_jitter: true`)**:
-   - Random delay between `min_jitter_seconds: 60` and `max_jitter_seconds: 300` (1 to 5 minutes) before publishing to Facebook.
-   - ChatGPT generates the 9:16 photo immediately; jitter pauses only prior to launching the Facebook campaign.
-   - Eliminates unnatural bot-like exact-second scheduled executions on Facebook.
+1. **Slot Timing Jitter (`enable_slot_jitter: true`)**:
+   - Random delay between `min_jitter_seconds: 60` and `max_jitter_seconds: 300` (1 to 5 minutes) before running each scheduled slot.
+   - Eliminates unnatural bot-like exact-second scheduled executions.
    - Can be bypassed for manual immediate testing with the `--no-jitter` flag or via the interactive menu.
 
-2. **Humanized Facebook Reaction Delays & Hover Clicks (`enable_human_delays: true`)**:
+2. **Humanized Reaction Delays & Hover Clicks (`enable_human_delays: true`)**:
    - Replaces hardcoded fixed sleeps with randomized ranges (e.g. `human_delay(1.5, 3.5)`).
    - Elements are hovered naturally with micro-pauses (`human_click`) before clicking.
    - Natural breathing pauses (4.0s to 7.0s) between Page and Profile channel publishing.
 
-3. **Proactive Facebook Security Checkpoint Detection (`enable_checkpoint_detection: true`)**:
+3. **Proactive Security Checkpoint Detection (`enable_checkpoint_detection: true`)**:
    - Proactively inspects URL for `/checkpoint/`, `/recover/`, `/login/device-based/`.
-   - Scans Facebook page text for challenge phrases (*"confirm your identity"*, *"action blocked"*, *"suspicious activity detected"*, etc.).
+   - Scans body text for challenge phrases (*"confirm your identity"*, *"action blocked"*, *"suspicious activity detected"*, etc.).
    - If detected, immediately captures a diagnostic screenshot (`logs/security_checkpoint.png`), logs a critical alert, and safely aborts execution to protect the account from locks.
 
 ---

@@ -67,11 +67,10 @@ Slot Trigger (IST)
   - Verifies DOM image preview before publishing (protects against caption-only posts).
 - **Native 9:16 Facebook Story Upload**:
   - Automatically uploads the full-screen 9:16 photo with native Story AI labels enabled for both Page and Profile.
-- **Anti-Detection & Humanized Safety Guardrails (Exclusively for Facebook)**:
-  - **Immediate ChatGPT Generation**: ChatGPT image generation runs directly upon slot trigger with zero delays or jitter.
-  - **Facebook Slot Timing Jitter**: Random delay (60–300s) before publishing to Facebook to prevent clockwork robotic schedule detection (bypassed with `--no-jitter` for manual testing).
-  - **Humanized Facebook Reaction Delays**: Randomized hover pauses (`human_click`) and variable navigation intervals simulating natural human browsing behavior on Facebook.
-  - **Proactive Facebook Security Checkpoint Detection**: Scans Facebook URLs and body text for identity verification or action blocks, saves diagnostic screenshots (`logs/security_checkpoint.png`), and cleanly aborts to protect account health.
+- **Anti-Detection & Humanized Safety Guardrails**:
+  - **Slot Timing Jitter**: Random delay (60–300s) before execution to prevent clockwork robotic schedule detection (bypassed with `--no-jitter` for manual testing).
+  - **Humanized Reaction Delays**: Randomized hover pauses (`human_click`) and variable navigation intervals simulating natural human browsing behavior.
+  - **Proactive Security Checkpoint Detection**: Scans page URLs and body text for identity verification or action blocks, saves diagnostic screenshots (`logs/security_checkpoint.png`), and cleanly aborts to protect account health.
 
 ---
 

@@ -61,13 +61,12 @@ def load_config(config_path="config.yaml"):
 
 def run_slot_pipeline(slot_key, config, logger, apply_jitter=True):
     """
-    Executes end-to-end flow for a specific slot:
-    1. Generates 9:16 vertical image immediately via ChatGPT with reference face (no delays)
-    2. Verifies uniqueness via SHA-256 registry
-    3. Builds caption with hashtags & greetings
-    4. Facebook Anti-Detection: Applies random timing jitter strictly before Facebook publishing
-    5. Publishes to 4 Facebook channels with humanized pacing and security checkpoint detection:
-       - Page Feed, Page Story, Profile Feed, Profile Story
+    Executes end-to-end flow for a specific slot with anti-detection pacing:
+    1. Pauses with random jitter (if enabled) to eliminate robotic clockwork timing patterns
+    2. Generates 9:16 vertical image via ChatGPT with reference face
+    3. Verifies uniqueness via SHA-256 registry
+    4. Builds caption with hashtags & greetings
+    5. Publishes to 4 channels: Page Feed, Page Story, Profile Feed, Profile Story
     """
     slots = config.get("slots", {})
     if slot_key not in slots:
@@ -79,6 +78,15 @@ def run_slot_pipeline(slot_key, config, logger, apply_jitter=True):
     greeting = slot_info.get("greeting", "")
     hashtags = slot_info.get("hashtags", "")
 
+    # Anti-Detection: Timing Jitter (simulates human unpredictability)
+    safety_cfg = config.get("safety", {})
+    if apply_jitter and safety_cfg.get("enable_slot_jitter", True):
+        min_j = safety_cfg.get("min_jitter_seconds", 60)
+        max_j = safety_cfg.get("max_jitter_seconds", 300)
+        jitter = random.randint(min_j, max_j)
+        logger.info(f"Anti-Detection Jitter: Pausing for {jitter}s ({jitter//60}m {jitter%60}s) before starting [{label}] to prevent robotic clockwork patterns...")
+        time.sleep(jitter)
+
     logger.info("==================================================")
     logger.info(f"Starting execution for Maira Dash: [{label}] ({slot_key})")
     logger.info("==================================================")
@@ -88,7 +96,7 @@ def run_slot_pipeline(slot_key, config, logger, apply_jitter=True):
     tracker = ImageTracker()
     dynamic_prompt = prompt_engine.generate_prompt(slot_key, label)
 
-    # Step 2: Generate unique image immediately with ChatGPT (no delays/jitter)
+    # Step 2: Generate unique image with ChatGPT
     chatgpt = ChatGPTAgent(config)
     ref_image = config["paths"].get("reference_face", "assets/reference_face.jpg")
     logger.info(f"Step 1: Generating custom 9:16 image via ChatGPT for {label}...")
@@ -111,21 +119,12 @@ def run_slot_pipeline(slot_key, config, logger, apply_jitter=True):
     full_caption = f"{greeting}\n\n{hashtags}"
     logger.info("Step 2: Composed Facebook caption:\n" + ("-" * 40) + f"\n{full_caption}\n" + ("-" * 40))
 
-    # Facebook Anti-Detection: Timing Jitter (Exclusively for Facebook Publishing - Not for ChatGPT)
-    safety_cfg = config.get("safety", {})
-    if apply_jitter and safety_cfg.get("enable_slot_jitter", True):
-        min_j = safety_cfg.get("min_jitter_seconds", 60)
-        max_j = safety_cfg.get("max_jitter_seconds", 300)
-        jitter = random.randint(min_j, max_j)
-        logger.info(f"Facebook Anti-Detection Jitter: Pausing for {jitter}s ({jitter//60}m {jitter%60}s) before publishing to Facebook to prevent robotic clockwork patterns...")
-        time.sleep(jitter)
-
-    # Step 4: Publish to 4 Facebook channels with humanized delays and checkpoint detection:
+    # Step 4: Publish to 4 Facebook channels:
     # 1. Page Feed
     # 2. Page Story
     # 3. Personal Profile Feed
     # 4. Personal Profile Story
-    logger.info(f"Step 3: Launching 4-channel Facebook publishing campaign with image: {image_path}")
+    logger.info(f"Step 3: Launching 4-channel publishing campaign with image: {image_path}")
     publisher = FacebookPublisher(config)
     location = config.get("facebook", {}).get("location", "Odisha, India")
     ai_label = config.get("facebook", {}).get("ai_label", True)

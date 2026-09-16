@@ -142,5 +142,21 @@
     "category": "fashion_modeling_glamour",
     "scene": "modeling beside an exotic luxury resort turquoise infinity pool, gentle breeze p",
     "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, modeling beside an exotic luxury resort turquoise infinity pool, gentle breeze playing with her hair, glamorous and effortless model aesthetic. She is wearing a contemporary designer saree with an elegant modern blouse and graceful drape, confident, charming, and stylish expression with an effortless friendly smile. Vertical 9:16 cinematic eye-level portrait with natural 35mm lens depth of field, creamy soft bokeh background. Lighting: radiant early morning golden hour light, soft morning rays filtering through, refreshing and bright aesthetic. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
+  },
+  {
+    "timestamp": "2026-09-16T11:22:49.382898",
+    "slot": "morning",
+    "label": "Good Morning",
+    "category": "odisha_heritage_beaches",
+    "scene": "standing on the misty pine-covered hilltops of Daringbadi (the Kashmir of Odisha",
+    "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, standing on the misty pine-covered hilltops of Daringbadi (the Kashmir of Odisha), surrounded by lush coffee plantations and cool morning mountain mist. She is wearing a graceful Odisha handloom saree with authentic cultural charm, smiling radiantly and radiating positive, cheerful influencer energy. Vertical 9:16 vertical travel-influencer lifestyle shot with authentic ambient framing and natural depth. Lighting: radiant early morning golden hour light, soft morning rays filtering through, refreshing and bright aesthetic. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
+  },
+  {
+    "timestamp": "2026-09-16T11:32:06.757035",
+    "slot": "noon",
+    "label": "Good Noon",
+    "category": "student_campus_life",
+    "scene": "sitting in a grand sunlit university library at a polished wooden study desk, re",
+    "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, sitting in a grand sunlit university library at a polished wooden study desk, reading books with her laptop open, smart glasses, smiling warmly. She is wearing trendy campus streetwear with a stylish canvas tote and clean sneakers, serene, thoughtful, and deeply grateful expression looking toward the golden horizon. Vertical 9:16 mobile portrait orientation, full environmental shot capturing her natural curvy pear-shaped silhouette and breathtaking surroundings. Lighting: vibrant natural midday ambient sunlight, crisp textures, high clarity, clean and energizing atmosphere. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
   }
 ]

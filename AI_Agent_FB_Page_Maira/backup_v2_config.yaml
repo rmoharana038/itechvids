@@ -3,12 +3,12 @@
 
 timezone: "Asia/Kolkata"
 
-# Safety & Anti-Detection Guardrails (Exclusively for Facebook Publishing - Not for ChatGPT)
+# Safety & Anti-Detection Guardrails
 safety:
-  enable_slot_jitter: true         # Randomize Facebook posting start time by a few minutes (avoids clockwork bot pattern)
-  min_jitter_seconds: 60           # Minimum jitter delay before Facebook publishing (1 minute)
-  max_jitter_seconds: 300          # Maximum jitter delay before Facebook publishing (5 minutes)
-  enable_human_delays: true        # Randomize Facebook click/navigation delays (natural human pacing)
+  enable_slot_jitter: true         # Randomize start time by a few minutes (avoids clockwork bot pattern)
+  min_jitter_seconds: 60           # Minimum jitter delay (1 minute)
+  max_jitter_seconds: 300          # Maximum jitter delay (5 minutes)
+  enable_human_delays: true        # Randomize click/navigation delays (natural human pacing)
   enable_checkpoint_detection: true # Automatically detect & safely abort if Facebook shows security prompts
 
 # 5 Daily Slots between 6:00 AM and 9:00 PM IST
