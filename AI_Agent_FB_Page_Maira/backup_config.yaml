@@ -1,0 +1,96 @@
+# Facebook Page Automated Posting Agent Configuration - Maira Dash
+# Timezone: Indian Standard Time (IST)
+
+timezone: "Asia/Kolkata"
+
+# 5 Daily Slots between 6:00 AM and 9:00 PM IST
+slots:
+  morning:
+    enabled: true
+    time: "06:30"
+    label: "Good Morning"
+    feeling: "blessed"
+    greeting: "Good Morning beautiful souls! 🌅✨ Rise and shine! May your day be filled with radiant positive energy, sweet moments, and endless opportunities. Let's make today unforgettable! 💖💫"
+    prompt: >-
+      Create a photorealistic, vibrant, and uplifting vertical 9:16 portrait featuring the 23-year-old Indian woman from the reference image, with her natural curvy pear-shaped physique.
+      She is enjoying an inspiring, bright morning with soft golden sunrise light, smiling radiantly and looking happy and confident.
+      High resolution, authentic skin texture, cheerful morning vibes.
+    hashtags: "#GoodMorning #NewDayNewVibes #PositiveEnergy #FitnessGirl #ModelLife #StudentLife #MorningMotivation #BlessedAndGrateful #MairaDash"
+
+  noon:
+    enabled: true
+    time: "11:30"
+    label: "Good Noon"
+    feeling: "happy"
+    greeting: "Happy Midday everyone! ☀️🥗 Stay hydrated, stay focused, and keep radiating your vibrant light! Halfway through the day and crushing those goals! 💪✨"
+    prompt: >-
+      Create a photorealistic, vibrant, and energetic vertical 9:16 portrait featuring the 23-year-old Indian woman from the reference image, showcasing her curvy pear-shaped physique.
+      Midday setting, bright natural ambient sunlight, looking accomplished, stylish, and energized.
+      High resolution, realistic textures, warm positive tone.
+    hashtags: "#GoodNoon #MiddayVibes #CrushingGoals #FitnessMotivation #LifestyleInfluencer #StayHydrated #WorkHardPlayHard #MairaDash"
+
+  afternoon:
+    enabled: true
+    time: "15:30"
+    label: "Good Afternoon"
+    feeling: "thankful"
+    greeting: "Good Afternoon my loves! ☕🌸 Take a pause, sip your favorite iced coffee or tea, breathe deeply, and appreciate how far you've come today. Self-care and grace always! 💖🍃"
+    prompt: >-
+      Create a photorealistic, serene vertical 9:16 portrait featuring the 23-year-old Indian woman from the reference image in a cozy afternoon setting, accentuating her graceful curvy pear-shaped physique.
+      Gentle afternoon sunlight filtering through, relaxing with a friendly radiant smile, calm and reflective atmosphere.
+      High resolution, elegant fashion photography style, warm colors.
+    hashtags: "#GoodAfternoon #CafeVibes #CoffeeLover #SelfCareFirst #GratefulHeart #FashionInfluencer #PeacefulMoments #MairaDash"
+
+  evening:
+    enabled: true
+    time: "18:30"
+    label: "Good Evening"
+    feeling: "excited"
+    greeting: "Good Evening lovely people! 🌇✨ Golden hour magic in the air! The day winds down, the city lights turn on, and the real fun begins. Embrace every magical moment! 🌆🥂"
+    prompt: >-
+      Create a photorealistic, cinematic vertical 9:16 portrait featuring the 23-year-old Indian woman from the reference image against a beautiful evening golden hour or sunset skyline, highlighting her stylish look and curvy pear-shaped physique.
+      Warm amber and violet sky colors, gentle breeze, smiling and glamorous expression.
+      High resolution, photographic depth of field, stunning cinematic lighting.
+    hashtags: "#GoodEvening #GoldenHourGlow #SunsetLovers #CityLights #GlamLife #FashionModel #EveningAesthetics #MairaDash"
+
+  night:
+    enabled: true
+    time: "21:00"
+    label: "Good Night"
+    feeling: "peaceful"
+    greeting: "Good Night sweet friends! 🌙✨ Let go of what you couldn't do today, wrap yourself in peace, dream fearless dreams, and wake up ready to conquer tomorrow. Sending you all so much love! 💫💤"
+    prompt: >-
+      Create a photorealistic, soothing nighttime vertical 9:16 portrait featuring the 23-year-old Indian woman from the reference image, with her natural curvy pear-shaped physique.
+      Ambient nighttime city lights or cozy room ambiance in the background, soft warm lighting, calm and reflective serene smile.
+      High resolution, cozy and peaceful mood.
+    hashtags: "#GoodNight #SweetDreams #NightOwl #PeacefulVibes #RestAndRecharge #FaithAndGrace #GratefulEveryDay #MairaDash"
+
+paths:
+  reference_face: "assets/reference_face.jpg"
+  browser_profile: "browser_profile"
+  generated_dir: "generated"
+  log_file: "logs/agent.log"
+  history_file: "logs/post_history.json"
+
+chatgpt:
+  # Browser automation settings for ChatGPT (Free web tier)
+  url: "https://chatgpt.com"
+  headless: false   # false is recommended for ChatGPT to avoid Cloudflare/bot challenges
+  timeout_seconds: 180
+  retry_count: 2
+
+facebook:
+  # Choose posting method: "browser" (Playwright UI) or "api" (Graph API)
+  method: "browser"
+  # Target 1: Facebook Page
+  page_url: "https://www.facebook.com/Maira.Dash.Page/"
+  # Target 2: Personal Profile
+  profile_url: "https://www.facebook.com/maira.dash/"
+  location: "Odisha, India"
+  ai_label: true
+  share_to_story: true
+  post_to_profile: true
+  share_to_profile_story: true
+  # Graph API options (optional if method is "api")
+  page_id: ""
+  access_token: ""

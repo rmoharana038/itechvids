@@ -1,0 +1,24 @@
+# Python & Virtual Environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SENSITIVE: Browser Profiles & Sessions (Cookies, Local Storage, Auth Tokens)
+browser_profile/
+
+# Logs & Screenshots
+logs/*.log
+logs/*.png
+
+# Generated Output
+generated/*.jpg
+!generated/.gitkeep
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
