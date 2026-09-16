@@ -158,5 +158,29 @@
     "category": "student_campus_life",
     "scene": "sitting in a grand sunlit university library at a polished wooden study desk, re",
     "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, sitting in a grand sunlit university library at a polished wooden study desk, reading books with her laptop open, smart glasses, smiling warmly. She is wearing trendy campus streetwear with a stylish canvas tote and clean sneakers, serene, thoughtful, and deeply grateful expression looking toward the golden horizon. Vertical 9:16 mobile portrait orientation, full environmental shot capturing her natural curvy pear-shaped silhouette and breathtaking surroundings. Lighting: vibrant natural midday ambient sunlight, crisp textures, high clarity, clean and energizing atmosphere. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
+  },
+  {
+    "timestamp": "2026-09-16T15:30:02.362124",
+    "slot": "afternoon",
+    "label": "Good Afternoon",
+    "category": "nature_forest_hillstations",
+    "scene": "sitting on a smooth river stone beside a crystal-clear mountain stream, dipping ",
+    "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, sitting on a smooth river stone beside a crystal-clear mountain stream, dipping feet near fresh water, surrounded by lush green flora and peaceful nature. She is wearing a comfortable scenic viewpoint outfit with warm autumn tones, serene, thoughtful, and deeply grateful expression looking toward the golden horizon. Vertical 9:16 dynamic candid low-angle perspective, confident posture, full height and stylish outfit details. Lighting: warm, gentle afternoon sun with golden amber tones, cozy and inviting ambiance. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
+  },
+  {
+    "timestamp": "2026-09-16T18:30:03.379507",
+    "slot": "evening",
+    "label": "Good Evening",
+    "category": "nightlife_club_dance",
+    "scene": "on a fun weekend cinema and movie date night at a luxury cinema theatre lounge, ",
+    "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, on a fun weekend cinema and movie date night at a luxury cinema theatre lounge, holding gourmet popcorn, bright cheerful smile. She is wearing a stylish sleek modern clubwear outfit radiating confident nightlife glamour, smiling radiantly and radiating positive, cheerful influencer energy. Vertical 9:16 medium-close candid shot, highlighting her radiant facial features, warm expressive eyes, and natural skin texture. Lighting: spectacular sunset twilight, rich amber, crimson and violet sky, dramatic cinematic golden hour rim light. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
+  },
+  {
+    "timestamp": "2026-09-16T21:00:01.825366",
+    "slot": "night",
+    "label": "Good Night",
+    "category": "india_travel",
+    "scene": "standing near the iconic Charminar in Hyderabad, exploring the historic pearl ba",
+    "prompt": "A photorealistic, highly detailed vertical portrait of the 23-year-old Indian woman from the reference photo, maintaining her exact face, warm brown eyes, radiant smile, and natural curvy pear-shaped physique, standing near the iconic Charminar in Hyderabad, exploring the historic pearl bazaars and heritage culture. She is wearing a vibrant contemporary ethnic fusion outfit with traditional accents, candid happy laugh, looking naturally engaged, vibrant, and full of life. Vertical 9:16 vertical travel-influencer lifestyle shot with authentic ambient framing and natural depth. Lighting: soothing ambient nighttime lighting, subtle warm fairy lights or city lights bokeh, deep peaceful night atmosphere. STRICT ASPECT RATIO REQUIREMENT: Must be in vertical 9:16 aspect ratio (portrait mobile phone format, 1024x1792). High resolution 8k photography, authentic lifelike human skin texture, natural anatomy, vibrant rich colors."
   }
 ]

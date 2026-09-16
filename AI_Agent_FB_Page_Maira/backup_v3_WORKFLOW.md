@@ -33,7 +33,7 @@ The agent autonomously manages content creation and multi-channel publication ac
 ```mermaid
 flowchart TD
     subgraph TriggerLayer["1. Trigger & Scheduling Layer (IST)"]
-        A["APScheduler / Windows Task Scheduler (Asia/Kolkata)"] -->|"05:45, 11:45, 15:45, 17:45, 20:45"| B["Trigger Scheduled Slot"]
+        A["APScheduler / Windows Task Scheduler (Asia/Kolkata)"] -->|"06:30, 11:30, 15:30, 18:30, 21:00"| B["Trigger Scheduled Slot"]
         M["Manual Run (start_agent.bat / CLI)"] -->|"On Demand"| B
     end
 
@@ -132,11 +132,11 @@ D:\Gemini\AI_Agent_FB_Page_Maira\
 
 ### Step 1: Scheduling & Triggering
 The agent triggers at 5 daily slots in Indian Standard Time (`Asia/Kolkata`):
-1. **Morning (05:45 AM IST)**: Greeting: *"Good Morning beautiful souls! 🌅✨ Rise and shine..."* (`blessed`)
-2. **Noon (11:45 AM IST)**: Greeting: *"Happy Midday everyone! ☀️🥗 Stay hydrated..."* (`happy`)
-3. **Afternoon (03:45 PM IST)**: Greeting: *"Good Afternoon my loves! ☕🌸 Take a pause..."* (`thankful`)
-4. **Evening (05:45 PM IST)**: Greeting: *"Good Evening lovely people! 🌇✨ Golden hour magic..."* (`excited`)
-5. **Night (08:45 PM IST)**: Greeting: *"Good Night sweet friends! 🌙✨ Let go of what you couldn't do..."* (`peaceful`)
+1. **Morning (06:30 AM IST)**: Greeting: *"Good Morning beautiful souls! 🌅✨ Rise and shine..."* (`blessed`)
+2. **Noon (11:30 AM IST)**: Greeting: *"Happy Midday everyone! ☀️🥗 Stay hydrated..."* (`happy`)
+3. **Afternoon (03:30 PM IST)**: Greeting: *"Good Afternoon my loves! ☕🌸 Take a pause..."* (`thankful`)
+4. **Evening (06:30 PM IST)**: Greeting: *"Good Evening lovely people! 🌇✨ Golden hour magic..."* (`excited`)
+5. **Night (09:00 PM IST)**: Greeting: *"Good Night sweet friends! 🌙✨ Let go of what you couldn't do..."* (`peaceful`)
 
 ---
 

@@ -11,11 +11,11 @@ safety:
   enable_human_delays: true        # Randomize Facebook click/navigation delays (natural human pacing)
   enable_checkpoint_detection: true # Automatically detect & safely abort if Facebook shows security prompts
 
-# 5 Daily Slots (05:45, 11:45, 15:45, 17:45, 20:45 IST)
+# 5 Daily Slots between 6:00 AM and 9:00 PM IST
 slots:
   morning:
     enabled: true
-    time: "05:45"
+    time: "06:30"
     label: "Good Morning"
     feeling: "blessed"
     greeting: "Good Morning beautiful souls! 🌅✨ Rise and shine! May your day be filled with radiant positive energy, sweet moments, and endless opportunities. Let's make today unforgettable! 💖💫"
@@ -27,7 +27,7 @@ slots:
 
   noon:
     enabled: true
-    time: "11:45"
+    time: "11:30"
     label: "Good Noon"
     feeling: "happy"
     greeting: "Happy Midday everyone! ☀️🥗 Stay hydrated, stay focused, and keep radiating your vibrant light! Halfway through the day and crushing those goals! 💪✨"
@@ -39,7 +39,7 @@ slots:
 
   afternoon:
     enabled: true
-    time: "15:45"
+    time: "15:30"
     label: "Good Afternoon"
     feeling: "thankful"
     greeting: "Good Afternoon my loves! ☕🌸 Take a pause, sip your favorite iced coffee or tea, breathe deeply, and appreciate how far you've come today. Self-care and grace always! 💖🍃"
@@ -51,7 +51,7 @@ slots:
 
   evening:
     enabled: true
-    time: "17:45"
+    time: "18:30"
     label: "Good Evening"
     feeling: "excited"
     greeting: "Good Evening lovely people! 🌇✨ Golden hour magic in the air! The day winds down, the city lights turn on, and the real fun begins. Embrace every magical moment! 🌆🥂"
@@ -63,7 +63,7 @@ slots:
 
   night:
     enabled: true
-    time: "20:45"
+    time: "21:00"
     label: "Good Night"
     feeling: "peaceful"
     greeting: "Good Night sweet friends! 🌙✨ Let go of what you couldn't do today, wrap yourself in peace, dream fearless dreams, and wake up ready to conquer tomorrow. Sending you all so much love! 💫💤"

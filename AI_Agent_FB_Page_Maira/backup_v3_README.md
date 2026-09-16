@@ -54,7 +54,7 @@ Slot Trigger (IST)
 
 ## Key Features
 
-- **5 Daily IST Schedules**: Posts automatically at `05:45 AM` (Good Morning), `11:45 AM` (Good Noon), `03:45 PM` (Good Afternoon), `05:45 PM` (Good Evening), and `08:45 PM` (Good Night) in Indian Standard Time (`Asia/Kolkata`).
+- **5 Daily IST Schedules**: Posts automatically at `06:30 AM` (Good Morning), `11:30 AM` (Good Noon), `03:30 PM` (Good Afternoon), `06:30 PM` (Good Evening), and `09:00 PM` (Good Night) in Indian Standard Time (`Asia/Kolkata`).
 - **Free ChatGPT Web Automation**: Uses a local persistent Chromium browser profile (`browser_profile/`) to generate high-resolution photorealistic images without paid API keys.
 - **Dynamic Prompt Engine**: Automatically selects and builds rich non-repeating prompts reflecting Maira's persona, physique, and contextually matched outfits.
 - **Strict 9:16 Aspect Ratio**: Automatically crops and verifies 9:16 vertical resolution (1024x1792 / 1080x1920) via Pillow.
@@ -134,11 +134,11 @@ Double-click:
 install_windows_tasks.bat
 ```
 This registers 5 daily tasks in Windows Task Scheduler under folder `AI_Agent_FB_Page_Maira`:
-- **05:45 AM IST**: Good Morning (All 4 channels)
-- **11:45 AM IST**: Good Noon (All 4 channels)
-- **03:45 PM IST**: Good Afternoon (All 4 channels)
-- **05:45 PM IST**: Good Evening (All 4 channels)
-- **08:45 PM IST**: Good Night (All 4 channels)
+- **06:30 AM IST**: Good Morning (All 4 channels)
+- **11:30 AM IST**: Good Noon (All 4 channels)
+- **03:30 PM IST**: Good Afternoon (All 4 channels)
+- **06:30 PM IST**: Good Evening (All 4 channels)
+- **09:00 PM IST**: Good Night (All 4 channels)
 
 Tasks execute silently in the background via `run_hidden.vbs` without opening any command window.
 
